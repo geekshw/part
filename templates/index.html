@@ -12,7 +12,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas 	header-shadow-text
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -32,10 +32,10 @@
 		
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.png">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="{% static 'favicon.png' %}">
+	<link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'apple-touch-icon-114x114.png' %}">
 	
 	
 	
@@ -138,10 +138,10 @@
 				<div class="video-sections">
 					<div class="video-section-1">	
 						<div class="just_pattern"></div>
-						<video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="images/1.jpg"> 
-							<source src="videos/video.webm" type="video/webm"> 
-							<source src="videos/video.mp4" type="video/mp4"> 
-							<source src="videos/video.ogg" type="video/ogg"> 
+						<video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{% static 'images/1.jpg"> 
+'%}							<source src="{% static'videos/video.webm %'}" type="video/webm"> 
+							<source src="{% static'videos/video.mp4 %'}" type="video/mp4"> 
+							<source src="{% static'videos/video.ogg %'}" type="video/ogg"> 
 						</video>
 						<div class="text-over-video">A Day at the Office</div>	
 					</div>	
@@ -180,7 +180,7 @@
 				<div class="container">	
 					<div class="four columns" data-scrollreveal="enter left and move 150px over 1s">
 						<div class="team-wrap">	
-							<img src="images/team1.jpg" alt=""/>
+							<img src="{% static 'images/team1.jpg'%}" alt=""/>
 							<h5>JAMES BEAN</h5>
 							<p>Creative Director</p>
 							<div class="team-line"></div>
@@ -204,7 +204,7 @@
 					</div>	
 					<div class="four columns" data-scrollreveal="enter left and move 150px over 1s">	
 						<div class="team-wrap">	
-							<img src="images/team2.jpg" alt=""/>
+							<img src="'{% static 'images/team2.jpg'%}" alt=""/>
 							<h5>ISABELLA MORO</h5>
 							<p>Chief Executive Officer</p>
 							<div class="team-line"></div>
@@ -228,7 +228,7 @@
 					</div>	
 					<div class="four columns" data-scrollreveal="enter right and move 150px over 1s">	
 						<div class="team-wrap">	
-							<img src="images/team3.jpg" alt=""/>
+							<img src="{% static 'images/team3.jpg'%}" alt=""/>
 							<h5>DAVID IVE</h5>
 							<p>General Manager</p>
 							<div class="team-line"></div>
@@ -252,7 +252,7 @@
 					</div>	
 					<div class="four columns" data-scrollreveal="enter right and move 150px over 1s">	
 						<div class="team-wrap">	
-							<img src="images/team4.jpg" alt=""/>
+							<img src="{% static 'images/team4.jpg'%}" alt=""/>
 							<h5>JAMES MORO</h5>
 							<p>HR Manager</p>
 							<div class="team-line"></div>
@@ -286,11 +286,11 @@
 								<li class="current">
 									<div class="description">
 										<h4>Tilted Content Slideshow</h4>
-										<p>This slider plays with 3D perspective and performs some interesting animations on the right-hand side images.</p>
-									</div>
+										<p>This slider plays with 3D perspective and performs some interesting animations on the right-hand side {% static 'images.</p>
+				'%}					</div>
 									<div class="tiltview col">
-										<a href="#"><img src="images/1_screen.jpg" alt=""/></a>
-										<a href="#"><img src="images/2_screen.jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/1_screen.'%}jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/2_screen.'%}jpg" alt=""/></a>
 									</div>
 								</li>
 								<li>
@@ -299,8 +299,8 @@
 										<p>We are using 12 different animations for showing and hiding the items of a slide. The animations are defined by randomly adding data-attributes called <code>data-effect-in</code> and <code>data-effect-out</code> for every slide. </p>
 									</div>
 									<div class="tiltview row">
-										<a href="#"><img src="images/3_mobile.jpg" alt=""/></a>
-										<a href="#"><img src="images/4_mobile.jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/3_mobile.'%}jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/4_mobile.'%}jpg" alt=""/></a>
 									</div>
 								</li>
 								<li>
@@ -309,8 +309,8 @@
 										<p>The perspective view is achieved by adding a perspective value to the slide list item and tilting a division that contains the two screenshots.</p>
 									</div>
 									<div class="tiltview col">
-										<a href="#"><img src="images/5_screen.jpg" alt=""/></a>
-										<a href="#"><img src="images/6_screen.jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/5_screen.'%}jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/6_screen.'%}jpg" alt=""/></a>
 									</div>
 								</li>
 								<li>
@@ -319,8 +319,8 @@
 										<p>The items in the tilted container are either laid out in a column or in a row. For some directions we need to adjust the animation delays for the items, since we don't want the items to overlap each other when they move in or out.</p>
 									</div>
 									<div class="tiltview row">
-										<a href="#"><img src="images/1_mobile.jpg" alt=""/></a>
-										<a href="#"><img src="images/2_mobile.jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/1_mobile.'%}jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/2_mobile.'%}jpg" alt=""/></a>
 									</div>
 								</li>
 								<li>
@@ -329,8 +329,8 @@
 										<p>For smaller screens, the items on the right hand side will become less opaque and serve as decoration only. The focus will be on the description which will occupy all the width.</p>
 									</div>
 									<div class="tiltview col">
-										<a href="#"><img src="images/3_screen.jpg" alt=""/></a>
-										<a href="#"><img src="images/4_screen.jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/3_screen.'%}jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/4_screen.'%}jpg" alt=""/></a>
 									</div>
 								</li>
 								<li>
@@ -339,8 +339,8 @@
 										<p>For the "line" navigation we use a little trick to make the clickable area a bit bigger: we add a thick white border to the top and bottom of the span. Since the border is part of the element, it will be part of the clickable zone.</p>
 									</div>
 									<div class="tiltview row">
-										<a href="#"><img src="images/5_mobile.jpg" alt=""/></a>
-										<a href="#"><img src="images/6_mobile.jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/5_mobile.'%}jpg" alt=""/></a>
+										<a href="#"><img src="{% static 'images/6_mobile.'%}jpg" alt=""/></a>
 									</div>
 								</li>
 							</ol>
@@ -350,13 +350,16 @@
 			
 			<div id="work">	
 				<div class="container">
+					{% for section in sections %}
 					<div class="sixteen columns" data-scrollreveal="enter top and move 150px over 1s">
 						<div class="header-text">
-							<div class="header-shadow-text">work</div>
-							<h1>work</h1>
-							<p>WE BELIEVE OUR WORK SPEAKS FOR ITSELF. BROWSE OUR MOST RECENT PROJECTS BELOW.</p>
+							<div class="header-shadow-text">{{ section.title }}</div>
+							<h1>{{ section.title }}</h1>
+							<p>{{ section.description }}</p>
 						</div>
 					</div>
+					{% endfor %}
+					
 				</div>
 				
 				<div class="clear"></div>
@@ -388,81 +391,81 @@
 				<ul class="portfolio-wrap">
 					<li class="portfolio-box photography web-design">	
 						<a class="expander" href="project2.html" title="">
-							<img  src="images/gallery/1.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/1'%}.jpg" alt="" />	
 							<div class="mask"></div>
 							<h4>All The Time</h4>
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/1.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/1'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>	
 					</li>
 					<li class="portfolio-box illustration1 motion-graphics">	
 						<a class="expander" href="project1.html" title="">
-							<img  src="images/gallery/2.jpg" alt="" />
+							<img  src="{% static 'images/gallery/2'%}.jpg" alt="" />
 							<div class="mask"></div>	
 							<h4>Golden Eagle</h4>	
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/2.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/2'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>		
 					</li>		
 					<li class="portfolio-box motion-graphics photography">	
 						<a class="expander" href="project3.html" title="">
-							<img  src="images/gallery/3.jpg" alt="" />
+							<img  src="{% static 'images/gallery/3'%}.jpg" alt="" />
 							<div class="mask"></div>
 							<h4>All The Time</h4>
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/3.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/3'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>				
 					</li>	
 					<li class="portfolio-box web-design illustration1">
 						<a class="expander" href="project4.html" title="">
-							<img  src="images/gallery/4.jpg" alt="" />
+							<img  src="{% static 'images/gallery/4'%}.jpg" alt="" />
 							<div class="mask"></div>
 							<h4>Fixed Mag</h4>	
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/4.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/4'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a> 			
 					</li>	
 					<li class="portfolio-box photography web-design">	
 						<a class="expander" href="project2.html" title="">
-							<img  src="images/gallery/5.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/5'%}.jpg" alt="" />	
 							<div class="mask"></div>	
 							<h4>La Catería</h4>
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/5.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/5'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>			
 					</li>
 					<li class="portfolio-box illustration1 motion-graphics">	
 						<a class="expander" href="project1.html" title="">
-							<img  src="images/gallery/6.jpg" alt="" />
+							<img  src="{% static 'images/gallery/6'%}.jpg" alt="" />
 							<div class="mask"></div>
 							<h4>5th Anniversary Set</h4>
 						</a>		
-						<a class="fancybox-effects-d" href="images/gallery/6.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/6'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>		
 					</li>	
 					<li class="portfolio-box motion-graphics photography">
 						<a class="expander" href="project3.html" title="">
-							<img  src="images/gallery/7.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/7'%}.jpg" alt="" />	
 							<div class="mask"></div>
 							<h4>La Catería</h4>
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/7.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/7'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>			
 					</li>	
 					<li class="portfolio-box web-design illustration1">
 						<a class="expander" href="project4.html" title="">
-							<img  src="images/gallery/8.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/8'%}.jpg" alt="" />	
 							<div class="mask"></div>
 							<h4>Dan Fink</h4>
 						</a>	
-						<a class="fancybox-effects-d" href="images/gallery/8.jpg" title="">
+						<a class="fancybox-effects-d" href="{% static 'images/gallery/8'%}.jpg" title="">
 							<div class="fancybox-button">&#xf106;</div>
 						</a>			
 					</li>		
@@ -622,22 +625,22 @@
 				<div class="container">	
 					<div class="sixteen columns">
 						<div class="logos-wrap">
-							<img  src="images/logos/1.png" alt="" />	
+							<img  src="{% static 'images/logos/1.p'%}ng" alt="" />	
 						</div>
 						<div class="logos-wrap">
-							<img  src="images/logos/2.png" alt="" />	
+							<img  src="{% static 'images/logos/2.p'%}ng" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/3.png" alt="" />	
+							<img  src="{% static 'images/logos/3.p'%}ng" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/4.png" alt="" />	
+							<img  src="{% static 'images/logos/4.p'%}ng" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/5.png" alt="" />	
+							<img  src="{% static 'images/logos/5.p'%}ng" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/2.png" alt="" />	
+							<img  src="{% static 'images/logos/2.p'%}ng" alt="" />	
 						</div>		
 					</div>
 				</div>		
@@ -650,7 +653,7 @@
 				<div class="container z-index">	
 					<div class="one-third column">
 						<div class="blog-post">
-							<img  src="images/blog/1.jpg" alt="" />
+							<img  src="{% static 'images/blog/1.jp'%}g" alt="" />
 							<h5>Blog post</h5>
 							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent commodo arcu massa.</p>
 							<p><span>26.2.2014.</span><span> 3 comments</span></p>
@@ -658,7 +661,7 @@
 					</div>	
 					<div class="one-third column">
 						<div class="blog-post">
-							<img  src="images/blog/2.jpg" alt="" />
+							<img  src="{% static 'images/blog/2.jp'%}g" alt="" />
 							<h5>Blog post</h5>
 							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent commodo arcu massa.</p>
 							<p><span>17.2.2014.</span><span> 7 comments</span></p>
@@ -666,7 +669,7 @@
 					</div>	
 					<div class="one-third column">
 						<div class="blog-post">
-							<img  src="images/blog/3.jpg" alt="" />
+							<img  src="{% static 'images/blog/3.jp'%}g" alt="" />
 							<h5>Blog post</h5>
 							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent commodo arcu massa.</p>
 							<p><span>12.2.2014.</span><span> 4 comments</span></p>
